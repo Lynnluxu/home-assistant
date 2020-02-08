@@ -9,3 +9,9 @@ config/home-assistant/*
 config/home-assistant/ip_bans.yaml
 config/home-assistant/secrets.yaml
 config/home-assistant/known_devices.yaml
+
+config/rhasspy/profiles/fr/*
+# XXX: Changes in this file should not be ignored. However, it contains an
+# `access_token` (for Home Assistant) which must remain secret. The token is
+# removed manually before committing. We ignore the entire file to avoid leaks.
+config/rhasspy/profiles/fr/profile.json

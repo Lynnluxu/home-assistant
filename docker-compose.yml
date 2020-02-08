@@ -9,3 +9,14 @@ services:
       - TZ=Europe/Paris
     restart: always
     network_mode: host
+
+  rhasspy:
+    container_name: rhasspy
+    image: "synesthesiam/rhasspy-server:latest"
+    restart: always
+    network_mode: host
+    volumes:
+      - "./config/rhasspy/profiles:/profiles"
+    devices:
+      - "/dev/snd:/dev/snd"
+    command: --user-profiles /profiles --profile fr

@@ -1,0 +1,14 @@
+{
+    "handle": {
+        "system": "hass"
+    },
+    "home_assistant": {
+        "url": "http://localhost:8123"
+    },
+    "text_to_speech": {
+        "picotts": {
+            "language": "fr-FR"
+        },
+        "system": "picotts"
+    }
+}

@@ -1,1 +1,9 @@
-[]
+- alias: "GetTime"
+  trigger:
+    platform: event
+    event_type: rhasspy_GetTime
+  action:
+    - service: rest_command.tts
+      data_template:
+        message: >
+          Il est {{ now().strftime("%H:%M") }}.
