@@ -45,7 +45,7 @@
    sudo pip3 install docker-compose
    ```
 
-## Step 2: Run Home Assistant and other services
+## Step 2: Run Home Assistant and other services
 
 ```
 docker-compose up -d
