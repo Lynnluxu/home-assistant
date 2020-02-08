@@ -11,3 +11,6 @@ config/home-assistant/secrets.yaml
 config/home-assistant/known_devices.yaml
 
 config/rhasspy/profiles/fr/*
+
+supervisord.log
+supervisord.pid
