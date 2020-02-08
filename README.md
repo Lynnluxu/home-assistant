@@ -1,6 +1,6 @@
 # Home Assistant on RPI3B+
 
-## Install Raspbian Buster Lite (headless setup)
+## Step 1: Install Raspbian Buster Lite (headless setup)
 
 **On another computer:**
 
@@ -44,3 +44,10 @@
    sudo apt install python3-pip
    sudo pip3 install docker-compose
    ```
+
+## Step 2: Run Home Assistant and other services
+
+```
+docker-compose up -d
+supervisord
+```
