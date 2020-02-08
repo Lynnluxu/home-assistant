@@ -10,5 +10,12 @@
             "language": "fr-FR"
         },
         "system": "picotts"
+    },
+    "wake": {
+        "porcupine": {
+            "keyword_path": "porcupine/hey pico_raspberrypi.ppn",
+            "sensitivity": "1"
+        },
+        "system": "porcupine"
     }
 }
