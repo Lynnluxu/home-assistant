@@ -58,6 +58,9 @@ class RequestHandler(BaseHTTPRequestHandler):
         except KeyError:
             self.wfile.write(html_code)
         else:
+            # Sanitize user input
+            new_volume = max(0, min(int(new_volume), 100))
+
             run(f"amixer -M set 'PCM' {new_volume}%".split(' '))
 
 
