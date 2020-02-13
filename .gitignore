@@ -4,6 +4,7 @@ config/home-assistant/*
 # Whitelist some files/folders, these will not be ignored.
 !config/home-assistant/*.yaml
 !config/home-assistant/*.md
+!config/home-assistant/automation/
 
 # Ensure these YAML files are ignored, otherwise secret data/credentials will leak.
 config/home-assistant/ip_bans.yaml
