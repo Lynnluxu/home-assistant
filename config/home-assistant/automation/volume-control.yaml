@@ -1,0 +1,10 @@
+- alias: "ChangeVolume"
+  trigger:
+    platform: event
+    event_type: rhasspy_ChangeVolume
+  action:
+    - service: rest_command.volume
+      data_template:
+        value: "{{ trigger.event.data.percentage }}"
+        action: "{{ trigger.event.data.action }}"
+    - service: rest_command.beep

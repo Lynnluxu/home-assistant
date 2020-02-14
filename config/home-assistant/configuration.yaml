@@ -17,6 +17,14 @@ rest_command:
     url: http://localhost:12101/api/text-to-speech
     method: POST
     payload: '{{ message }}'
+  volume:
+    url: 'http://localhost:15000/api/volume'
+    method: POST
+    headers:
+      content-type: 'application/x-www-form-urlencoded'
+    payload: 'value={{ value }}{% if action is defined %}&action={{ action }}{% endif %}'
+  beep:
+    url: 'http://localhost:15000/api/play-beep'
 
 group: !include groups.yaml
 automation: !include_dir_merge_list automation/

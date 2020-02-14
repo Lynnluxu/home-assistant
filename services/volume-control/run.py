@@ -1,3 +1,4 @@
+import os
 from subprocess import check_output, run
 
 from flask import Flask
@@ -81,7 +82,16 @@ class Volume(Resource):
         return self.get(), 201
 
 
+class PlayBeep(Resource):
+    def get(self):
+        here = os.path.dirname(os.path.realpath(__file__))
+        filepath = os.path.join(here, "beep.wav")
+        run(f"aplay {filepath}".split(' '))
+        return {"message": "Success", "data": {}}
+
+
 api.add_resource(Volume, '/api/volume')
+api.add_resource(PlayBeep, '/api/play-beep')
 
 
 def main():
