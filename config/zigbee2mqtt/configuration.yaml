@@ -1,0 +1,12 @@
+homeassistant: true
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqtt
+  server: 'mqtt://localhost'
+serial:
+  port: /dev/ttyACM0
+devices:
+  '0x0000000000000000':
+    friendly_name: 'Bedroom_1_Hue_white_ambiance_E26/E27'
+  '0x0000000000000000':
+    friendly_name: 'Bedroom_1_Hue_dimmer_switch'

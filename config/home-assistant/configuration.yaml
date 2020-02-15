@@ -30,3 +30,12 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+mqtt:
+  discovery: true
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
