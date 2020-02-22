@@ -5,6 +5,7 @@ config/home-assistant/*
 !config/home-assistant/*.yaml
 !config/home-assistant/*.md
 !config/home-assistant/automation/
+!config/home-assistant/python_scripts/
 
 # Ensure these YAML files are ignored, otherwise secret data/credentials will leak.
 config/home-assistant/ip_bans.yaml

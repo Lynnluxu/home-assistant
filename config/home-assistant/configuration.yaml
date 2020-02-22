@@ -30,6 +30,8 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 scene: !include scenes.yaml
+python_script:
+
 
 mqtt:
   discovery: true
