@@ -32,7 +32,7 @@ def next_white_temperature(target_id, length=4):
 
 service = "turn_off" if action.startswith("off") else "turn_on"
 
-service_data = {"entity_id": target_id, "transition": 1}
+service_data = {"entity_id": target_id, "transition": .25}
 if service != "turn_off":
   service_data["brightness"] = brightness
 if action == "on-press" and hass.states.get(target_id).state == "on":
