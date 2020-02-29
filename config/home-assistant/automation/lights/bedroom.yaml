@@ -4,7 +4,7 @@
     topic: zigbee2mqtt/Bedroom_1_Hue_dimmer_switch
   condition:
     condition: template
-    value_template: "{{ trigger.payload_json.action != '' }}"
+    value_template: "{{ trigger.payload_json.action not in (undefined, '') }}"
   action:
     - service: python_script.handle_hue_dimmer_switch
       data_template:
