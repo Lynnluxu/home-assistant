@@ -6,6 +6,11 @@
         "access_token": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
         "url": "http://localhost:8123"
     },
+    "sounds": {
+        "error": "/profiles/fr/wav/error.wav",
+        "recorded": "/profiles/fr/wav/recorder.wav",
+        "wake": "/profiles/fr/wav/wake.wav"
+    },
     "text_to_speech": {
         "picotts": {
             "language": "fr-FR"

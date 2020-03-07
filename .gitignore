@@ -14,6 +14,8 @@ config/home-assistant/known_devices.yaml
 
 config/rhasspy/profiles/fr/*
 
+!config/rhasspy/profiles/fr/wav
+
 config/zigbee2mqtt/*
 
 supervisord.log
