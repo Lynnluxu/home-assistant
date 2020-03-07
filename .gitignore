@@ -1,22 +1,23 @@
-# Ensures that everything will be ignored.
+# Home Assistant
 config/home-assistant/*
 
-# Whitelist some files/folders, these will not be ignored.
 !config/home-assistant/*.yaml
 !config/home-assistant/*.md
 !config/home-assistant/automation/
 !config/home-assistant/python_scripts/
 
-# Ensure these YAML files are ignored, otherwise secret data/credentials will leak.
 config/home-assistant/ip_bans.yaml
 config/home-assistant/secrets.yaml
 config/home-assistant/known_devices.yaml
 
+# Rhasspy
 config/rhasspy/profiles/fr/*
 
 !config/rhasspy/profiles/fr/wav
 
+# Zigbee2mqtt
 config/zigbee2mqtt/*
 
+# Supervisor
 supervisord.log
 supervisord.pid
