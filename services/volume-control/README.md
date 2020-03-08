@@ -2,6 +2,8 @@
 
 ## API usage
 
+⚠️ *This documentation is incomplete; potential errors are not described.*
+
 **`GET` `/api/volume`** Get current master volume
 
 **Response**
@@ -26,7 +28,7 @@
 | Name                        | Type      | Description                                  | Values                        |
 | --------------------------- | --------- | -------------------------------------------- | ----------------------------- |
 | `action`<sup>optional</sup> | `string`  | Action to perfom<br />*Default value*: `set` | `set`, `increase`, `decrease` |
-| `value`                     | `integer` | Value used by the action                     |                               |
+| `value`                     | `integer` | Value used by the action                     | [0, 100]                      |
 
 **Response**
 
