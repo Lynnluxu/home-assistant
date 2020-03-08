@@ -1,4 +1,5 @@
 - alias: "ChangeVolume"
+  hide_entity: true
   trigger:
     platform: event
     event_type: rhasspy_ChangeVolume

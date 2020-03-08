@@ -1,4 +1,5 @@
 - alias: "HandleBedroom_1_Hue_dimmer_switch"
+  hide_entity: true
   trigger:
     platform: mqtt
     topic: zigbee2mqtt/Bedroom_1_Hue_dimmer_switch
