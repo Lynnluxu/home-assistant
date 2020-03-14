@@ -6,8 +6,4 @@ mqtt:
 serial:
   port: /dev/ttyACM0
   disable_led: true
-devices:
-  '0x0000000000000000':
-    friendly_name: 'Bedroom_1_Hue_white_ambiance_E26/E27'
-  '0x0000000000000000':
-    friendly_name: 'Bedroom_1_Hue_dimmer_switch'
+devices: devices.yaml
