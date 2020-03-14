@@ -46,26 +46,29 @@ function setNewVolume(newVolume) {
 
     <div class="container">
       <span>🔊</span>
-      <input class="volume" type="range" min="0" max="100" onchange="setNewVolume(this.value)">
+      <input class="volume" type="range" min="0" max="100" value="%volume" onchange="setNewVolume(this.value)">
     </div>
   </body>
 </html>
 """
 
 
+def get_volume():
+    return int(check_output(
+        "amixer -M get 'PCM' | awk 'NR==5 {print $4}' | sed 's|[^0-9]||g'",
+        shell=True))
+
+
 @app.route("/")
 def index():
-    return html_code
+    # XXX: The string is too "complex" to use standard string formatting.
+    # Instead, an ugly workaround is used.
+    return html_code.replace("%volume", str(get_volume()))
 
 
 class Volume(Resource):
-    def _get_volume(self):
-        return int(check_output(
-            "amixer -M get 'PCM' | awk 'NR==5 {print $4}' | sed 's|[^0-9]||g'",
-            shell=True))
-
     def get(self):
-        return {"message": "Success", "data": {"volume": self._get_volume()}}
+        return {"message": "Success", "data": {"volume": get_volume()}}
 
     def post(self):
         actions = {"set": '', "increase": '+', "decrease": '-'}
