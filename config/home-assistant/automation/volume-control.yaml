@@ -1,4 +1,4 @@
-- alias: "ChangeVolume"
+- alias: "Change the master volume using voice intents"
   hide_entity: true
   trigger:
     platform: event

@@ -1,4 +1,4 @@
-- alias: "GetTime"
+- alias: "Tell the time"
   hide_entity: true
   trigger:
     platform: event

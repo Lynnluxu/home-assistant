@@ -1,4 +1,4 @@
-- alias: "HandleBedroom_1_Hue_dimmer_switch"
+- alias: "Control the bedroom light"
   hide_entity: true
   trigger:
     platform: mqtt
