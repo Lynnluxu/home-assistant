@@ -10,6 +10,7 @@ homeassistant:
   latitude: !secret latitude_home
   longitude: !secret longitude_home
   elevation: !secret elevation_home
+  customize: !include customize.yaml
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
