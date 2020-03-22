@@ -48,3 +48,6 @@ mqtt:
   will_message:
     topic: 'hass/status'
     payload: 'offline'
+
+lovelace:
+  mode: yaml
