@@ -1,4 +1,19 @@
 views:
+  - path: maison
+    title: Maison
+    cards:
+      - type: light
+        entity: light.bedroom_1_light_1_light
+        name: Chambre
+      - type: weather-forecast
+        entity: weather.maison
+      - type: map
+        aspect_ratio: 16:9
+        default_zoom: 8
+        entities:
+          - zone.home
+      - type: iframe
+        url: http://raspberrypi.local:15000
   - path: zigbee2mqtt
     title: Zigbee2mqtt
     badges:
