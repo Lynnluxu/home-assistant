@@ -13,7 +13,10 @@ views:
         entities:
           - zone.home
       - type: iframe
-        url: http://raspberrypi.local:15000
+        # XXX: We need to access ":15000", but I don't want to hardcode the
+        # host, e.g. "foobarbaz:15000". The following solution is a workaround;
+        # see <config-directory>/www/port-15000.html
+        url: /local/port-15000.html
   - path: zigbee2mqtt
     title: Zigbee2mqtt
     badges:
