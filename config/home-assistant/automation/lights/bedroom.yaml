@@ -1,5 +1,4 @@
 - alias: "Control the bedroom light"
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: zigbee2mqtt/bedroom_1_switch_1

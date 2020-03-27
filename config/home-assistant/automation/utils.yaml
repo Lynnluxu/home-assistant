@@ -1,5 +1,4 @@
 - alias: "Tell the time"
-  hide_entity: true
   trigger:
     platform: event
     event_type: rhasspy_GetTime
