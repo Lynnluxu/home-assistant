@@ -1,2 +1,6 @@
 sensor.disk_space_usage:
   icon: mdi:mdi:micro-sd
+
+person.bryton_lacquement:
+  friendly_name: Bryton
+  entity_picture: https://cdn.bminusl.xyz/images/bminusl.png
