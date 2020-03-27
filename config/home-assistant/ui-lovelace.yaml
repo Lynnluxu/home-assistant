@@ -30,7 +30,7 @@ views:
           - switch.zigbee2mqtt_main_join
           - timer.zigbee_permit_join
   - path: system
-    title: System
+    title: Système
     cards:
       - type: sensor
         entity: sensor.cpu_temperature
