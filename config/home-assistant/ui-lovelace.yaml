@@ -32,6 +32,7 @@ views:
   - path: system
     title: System
     cards:
-      - type: history-graph
-        entities:
-          - sensor.cpu_temperature
+      - type: sensor
+        entity: sensor.cpu_temperature
+        graph: line
+        name: Température du processeur
