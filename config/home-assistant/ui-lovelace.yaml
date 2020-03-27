@@ -36,3 +36,7 @@ views:
         entity: sensor.cpu_temperature
         graph: line
         name: Température du processeur
+      - type: sensor
+        entity: sensor.disk_space_usage
+        graph: line
+        name: Utilisation de l'espace disque
