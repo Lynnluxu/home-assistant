@@ -1,6 +1,7 @@
 views:
   - path: maison
     title: Maison
+    icon: mdi:home
     cards:
       - type: light
         entity: light.bedroom_1_light_1_light
@@ -19,6 +20,7 @@ views:
         url: /local/port-15000.html
   - path: zigbee2mqtt
     title: Zigbee2mqtt
+    icon: mdi:zigbee
     badges:
       - entity: sensor.coordinator_version
       - entity: sensor.zigbee2mqtt_version
@@ -31,6 +33,7 @@ views:
           - timer.zigbee_permit_join
   - path: system
     title: Système
+    icon: mdi:raspberry-pi
     cards:
       - type: vertical-stack
         cards:
