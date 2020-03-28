@@ -1,0 +1,53 @@
+path: system
+title: Système
+icon: mdi:raspberry-pi
+cards:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Ressources
+      - type: custom:mini-graph-card
+        entities:
+          - entity: sensor.cpu_temperature
+            name: CPU
+        hour24: true
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.processor_use
+                name: CPU
+            hour24: true
+            line_width: 10
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.memory_use_percent
+                name: RAM
+            hour24: true
+            line_width: 10
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.disk_use_percent
+                name: Micro SD
+            hour24: true
+            line_width: 10
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.swap_use_percent
+                name: Swap
+            hour24: true
+            line_width: 10
+
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Réseau
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: sensor.ipv4_address_eth0
+            name: Adresse IPv4

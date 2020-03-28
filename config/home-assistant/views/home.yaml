@@ -1,0 +1,19 @@
+path: home
+title: Maison
+icon: mdi:home
+cards:
+  - type: light
+    entity: light.bedroom_1_light_1_light
+    name: Chambre
+  - type: weather-forecast
+    entity: weather.maison
+  - type: map
+    aspect_ratio: 16:9
+    default_zoom: 8
+    entities:
+      - zone.home
+  - type: iframe
+    # XXX: We need to access ":15000", but I don't want to hardcode the
+    # host, e.g. "foobarbaz:15000". The following solution is a workaround;
+    # see <config-directory>/www/port-15000.html
+    url: /local/port-15000.html
