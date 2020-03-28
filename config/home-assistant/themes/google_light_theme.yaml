@@ -64,3 +64,8 @@ Google Light Theme:
   table-row-background-color: var(--primary-background-color)
   table-row-alternative-background-color: var(--secondary-background-color)
   data-table-background-color: var(--primary-background-color)
+
+  # Modifications to the theme...
+
+  # Reset the light icons color
+  paper-item-icon-active-color: "#fdd835"
