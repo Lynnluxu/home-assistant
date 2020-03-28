@@ -1,3 +1,6 @@
+resources:
+  - url: /local/mini-graph-card-bundle.js?v=0.9.3
+    type: module
 views:
   - path: maison
     title: Maison
@@ -40,30 +43,39 @@ views:
           - type: markdown
             content: >
               ## Ressources
-          - type: sensor
-            entity: sensor.cpu_temperature
-            graph: line
-            name: CPU
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.processor_use
-                graph: line
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.cpu_temperature
                 name: CPU
-              - type: sensor
-                entity: sensor.memory_use_percent
-                graph: line
-                name: RAM
+            hour24: true
           - type: horizontal-stack
             cards:
-              - type: sensor
-                entity: sensor.disk_use_percent
-                graph: line
-                name: Micro SD
-              - type: sensor
-                entity: sensor.swap_use_percent
-                graph: line
-                name: Swap
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.processor_use
+                    name: CPU
+                hour24: true
+                line_width: 10
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.memory_use_percent
+                    name: RAM
+                hour24: true
+                line_width: 10
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.disk_use_percent
+                    name: Micro SD
+                hour24: true
+                line_width: 10
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.swap_use_percent
+                    name: Swap
+                hour24: true
+                line_width: 10
 
       - type: vertical-stack
         cards:
