@@ -4,7 +4,12 @@ sensor:
     command: "cat /sys/class/thermal/thermal_zone0/temp"
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
-  - platform: command_line
-    name: Disk Space Usage
-    command: "df / | tail -1 | awk '{print $5}' | tr -d %"
-    unit_of_measurement: "%"
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: swap_use_percent
+      - type: ipv4_address
+        arg: eth0
+      - type: processor_use

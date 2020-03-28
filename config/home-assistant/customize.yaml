@@ -1,4 +1,4 @@
-sensor.disk_space_usage:
+sensor.disk_use_percent:
   icon: mdi:mdi:micro-sd
 
 person.bryton_lacquement:

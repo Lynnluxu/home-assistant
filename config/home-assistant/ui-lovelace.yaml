@@ -32,11 +32,43 @@ views:
   - path: system
     title: Système
     cards:
-      - type: sensor
-        entity: sensor.cpu_temperature
-        graph: line
-        name: Température du processeur
-      - type: sensor
-        entity: sensor.disk_space_usage
-        graph: line
-        name: Utilisation de l'espace disque
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ## Ressources
+          - type: sensor
+            entity: sensor.cpu_temperature
+            graph: line
+            name: CPU
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.processor_use
+                graph: line
+                name: CPU
+              - type: sensor
+                entity: sensor.memory_use_percent
+                graph: line
+                name: RAM
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.disk_use_percent
+                graph: line
+                name: Micro SD
+              - type: sensor
+                entity: sensor.swap_use_percent
+                graph: line
+                name: Swap
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ## Réseau
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.ipv4_address_eth0
+                name: Adresse IPv4
