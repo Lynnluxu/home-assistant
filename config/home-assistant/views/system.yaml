@@ -4,9 +4,6 @@ icon: mdi:raspberry-pi
 cards:
   - type: vertical-stack
     cards:
-      - type: markdown
-        content: >
-          ## Ressources
       - type: custom:mini-graph-card
         entities:
           - entity: sensor.cpu_temperature
@@ -31,7 +28,7 @@ cards:
           - type: custom:mini-graph-card
             entities:
               - entity: sensor.disk_use_percent
-                name: Micro SD
+                name: Disque
             hour24: true
             line_width: 10
           - type: custom:mini-graph-card
@@ -43,9 +40,6 @@ cards:
 
   - type: vertical-stack
     cards:
-      - type: markdown
-        content: >
-          ## Réseau
       - type: horizontal-stack
         cards:
           - type: sensor

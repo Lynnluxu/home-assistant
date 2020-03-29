@@ -1,5 +1,7 @@
 sensor.disk_use_percent:
-  icon: mdi:mdi:micro-sd
+  icon: mdi:micro-sd
+sensor.swap_use_percent:
+  icon: mdi:micro-sd
 
 person.bryton_lacquement:
   friendly_name: Bryton
