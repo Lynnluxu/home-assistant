@@ -1,18 +1,23 @@
-# A * ensures that everything will be ignored.
-*
+# Home Assistant
+config/home-assistant/.HA_VERSION
+config/home-assistant/.storage/
+config/home-assistant/home-assistant.log
+config/home-assistant/home-assistant_v2.db
+config/home-assistant/ip_bans.yaml
+config/home-assistant/secrets.yaml
+config/home-assistant/known_devices.yaml
 
-# You can whitelist files/folders with !, these will not be ignored.
-!*.yaml
-!.gitignore
-!*.md
 
-# Ignore folders.
-.storage
-.cloud
-.google.token
-
-# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
-ip_bans.yaml
-secrets.yaml
-known_devices.yaml 
-
+# Others
+.bash_aliases
+.bash_history
+.bash_logout
+.bashrc
+.bashrc~
+.profile
+.screenrc
+.ssh/
+.viminfo
+.vimrc
+dotfiles/
+get-docker.sh
