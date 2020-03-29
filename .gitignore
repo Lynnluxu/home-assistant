@@ -6,18 +6,3 @@ config/home-assistant/home-assistant_v2.db
 config/home-assistant/ip_bans.yaml
 config/home-assistant/secrets.yaml
 config/home-assistant/known_devices.yaml
-
-
-# Others
-.bash_aliases
-.bash_history
-.bash_logout
-.bashrc
-.bashrc~
-.profile
-.screenrc
-.ssh/
-.viminfo
-.vimrc
-dotfiles/
-get-docker.sh
