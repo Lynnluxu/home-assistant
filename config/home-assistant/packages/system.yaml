@@ -13,3 +13,7 @@ sensor:
       - type: ipv4_address
         arg: eth0
       - type: processor_use
+      - type: throughput_network_in
+        arg: eth0
+      - type: throughput_network_out
+        arg: eth0

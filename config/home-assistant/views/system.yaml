@@ -45,3 +45,15 @@ cards:
           - type: sensor
             entity: sensor.ipv4_address_eth0
             name: Adresse IPv4
+          - type: custom:mini-graph-card
+            name: Trafic
+            icon: mdi:gauge
+            entities:
+              - entity: sensor.network_throughput_in_eth0
+                name: Réception
+              - entity: sensor.network_throughput_out_eth0
+                name: Envoi
+            hour24: true
+            line_width: 10
+            points_per_hour: 120 # Every 30 seconds
+            hours_to_show: 0.1666667 # 10 minutes
