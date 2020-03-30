@@ -14,3 +14,29 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+frontend:
+  themes: !include_dir_merge_named themes/
+
+spotify:
+  client_id: 5a5b99dfacdf4e899b38233122ee6640
+  client_secret: !secret client_secret
+
+sensor:
+  - platform: mitemp_bt
+    mac: '4C:65:A8:D7:01:2F'
+    name: Living Room Temp
+    force_update: true
+    median: 1
+    monitored_conditions:
+      - temperature
+      - humidity
+      - battery
+
+pi_hole:
+  - host: 192.168.1.79
+
+ecovacs:
+  username: luxu_lynn@hotmail.com
+  password: !secret ecovacs
+  country: fr
+  continent: eu
