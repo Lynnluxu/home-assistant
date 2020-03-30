@@ -6,3 +6,4 @@ config/home-assistant/home-assistant_v2.db
 config/home-assistant/ip_bans.yaml
 config/home-assistant/secrets.yaml
 config/home-assistant/known_devices.yaml
+config/home-assistant/core
