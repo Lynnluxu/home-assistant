@@ -32,7 +32,7 @@ ssh pi@raspberrypi.local -L 12101:localhost:12101
 3. Install my dotfiles:
 
    ```bash
-   git clone https://gitlab.com/bminusl/dotfiles.git
+   git clone https://gitlab.com/lynnislu/dotfiles.git
    cd dotfiles
    ./install-dotfiles.sh
    ```
